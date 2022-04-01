@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* 
+
+---- MENU ----
+1 - HTML
+2 - image login
+3 - container login
+4 - register login
+5 - form login
+    5.1 - h2 login
+    5.2 - input login
+6 - password register
+7 - nav
+8 - container admin
+9 - tabelas
+10 - form edit 
+11 - form cadastrar livro
+*/
+
+/* 1 - html */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.container-form{
+    background: #ADE0DB;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 2 - image login */
+.image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.image span{
+    margin-top: 1rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #606D80;
+}
+
+/* 3 - container login */
+.container { 
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    background: rgb(255, 255, 255, 0.9);
+    min-width: 70vh;
+    min-height: 100vh;
+    padding: 2rem 3.5rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 40px 0 0 40px;
+}
+
+.register{
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* 4 - register login */
+.register > a{
+    background: none;
+    border: 1px solid;
+    border-radius: 20px;
+    border-color: #2B4C7E;
+    padding: 0.4rem 2rem;
+    color: #2B4C7E;
+    margin-left: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.register > a:hover{
+    background: #2B4C7E;
+    color: white;
+    letter-spacing: 0.3px;
+}
+
+/* 5 - form login */
+.form{
+   margin-top: 16vmin;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5.1 - h2 login */
+h2 {
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    position: relative;
+    font-size: 2em;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 25px;
+    bottom: 3px;
+    left: 0;
+    border-radius: 8px;
+    background: #2B4C7E;
+}
+
+/* 5.2 - input login */
+.input-field {
+    position: relative;
+}
+
+form .input-field {
+    margin-bottom: 2.5rem;
+}
+
+.input-field .underline::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-field .underline::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -5px;
+    left: 0;
+    background: #2B4C7E;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.input-field input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    background: none;
+}
+
+.input-field input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form input[type="submit"] {
+    padding: 0.5rem;
+    width: 100%;
+    background: #2B4C7E;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    letter-spacing: 0.5px;
+    background: none;
+    border: 1px solid;
+    border-color: #2B4C7E;
+    color: #2B4C7E;
+}
+
+/* 7 - password register */
+.password{
+    display: flex;
+    justify-content: space-between;
+}
+.input-field-password{
+    width: 48%;
+}
+.mensagem-erro{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 6 - nav */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10rem;
+    width: 100%;
+    background: #BCEBDF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar span{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #606D80;
+    cursor: pointer;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.nav-links a, li{
+    color: #2B4C7E;
+    font-weight: 500;
+}
+
+.nav-links{
+    list-style: none;
+}
+
+.nav-links li{
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+    color: #567EBB;
+}
+
+.btn-logon{
+    background: #d54c4a;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.btn-logon:hover{   
+    cursor: pointer;
+    background: none;
+    border: 1px solid;
+    border-color: #d54c4a;
+    color: #d54c4a;
+}
+
+/* 8 - container admin */
+.container-admin{
+    min-height: 100vh;
+    background: #EBF2F2;
+}
+.admin-container-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.admin-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 30vh;
+    background: white;
+    border-radius: 20px;
+    margin: 10rem 4rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.admin-content > span{
+    margin-top: 1rem;
+    font-weight: 500;
+    color: #2B4C7E;
+}
+
+.admin-container-content a{
+    text-decoration: none;
+}
+
+/* 9 - tabelas  */
+.table-list{
+    margin: 5rem 10rem;
+    background: white;
+}
+
+/* 10 - form edit  */
+
+.form-edit{
+    margin-top: 0;
+}
+
+.container-edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: rgb(255, 255, 255, 0.9);
+    padding: 2rem 3.5rem;
+    box-shadow: 5px 5px 15px rgb(0 0 0 / 20%);
+    border-radius: 40px;
+    margin: 5rem 20rem;
+}
+
+/* 11 - form cadastrar livro  */
+
+.container-btn-cadastrar{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5rem 10rem -4rem;
+}
+
+.btn-cadastrar{
+    background: #2B4C7E;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+
+
+
